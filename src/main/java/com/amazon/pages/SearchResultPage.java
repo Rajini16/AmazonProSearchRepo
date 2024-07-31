@@ -12,7 +12,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SearchResultPage {
 
-//	WebDriver driver;
 	WebDriverWait wait;	
 	
 	@FindBy(css = ".a-section.a-spacing-small.a-spacing-top-small > span:nth-child(3)")
@@ -20,16 +19,12 @@ public class SearchResultPage {
 	
 	@FindBy(xpath =  "//div[@data-component-type='s-search-result']")
 	List<WebElement> searchResultsImgList;
-	
-//	@FindBy(xpath = "//div[@data-component-type='s-search-result']//span)
-//	List<WebElement> searchResultsSpanList;
-	
+
 	@FindBy(xpath = ".//img")
 	WebElement imgElementText;
 	
 	
 	public SearchResultPage(WebDriver driver) {
-//        this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver, this);
 	}

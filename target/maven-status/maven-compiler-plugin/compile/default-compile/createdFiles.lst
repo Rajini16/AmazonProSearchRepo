@@ -1,7 +1,7 @@
-com\amazon\utils\DriverFactory.class
-com\amazon\utils\Utility.class
 com\amazon\pages\SearchResultPage.class
-com\amazon\utils\PicoDependencyInjector.class
-com\amazon\pages\HomePage.class
 com\amazon\utils\TestContext.class
 com\amazon\utils\ConfigReader.class
+com\amazon\utils\DriverFactory.class
+com\amazon\utils\Utility.class
+com\amazon\utils\PicoDependencyInjector.class
+com\amazon\pages\HomePage.class

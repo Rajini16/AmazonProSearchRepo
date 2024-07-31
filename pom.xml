@@ -21,13 +21,7 @@
   <dependencies>
 
 
-        <!-- TestNG for testing framework -->
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.10.2</version>
-            <scope>test</scope>
-        </dependency>
+
         
          <dependency>
             <groupId>io.cucumber</groupId>
@@ -63,12 +57,27 @@
             <version>1.14.0</version>
         </dependency>
         
+		        <!-- https://mvnrepository.com/artifact/com.vimalselvam/cucumber-extentsreport -->
+		<dependency>
+		    <groupId>com.vimalselvam</groupId>
+		    <artifactId>cucumber-extentsreport</artifactId>
+		    <version>3.1.1</version>
+		</dependency>
+
+        
         <!-- Selenium Java bindings -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.22.0</version>
         </dependency>
+        
+                <!-- TestNG for testing framework -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.10.2</version>
+         </dependency>
 
 
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
@@ -77,6 +86,21 @@
 		    <artifactId>cucumber-picocontainer</artifactId>
 		    <version>7.18.1</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
+		<dependency>
+		    <groupId>net.masterthought</groupId>
+		    <artifactId>cucumber-reporting</artifactId>
+		    <version>5.8.2</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/net.masterthought/maven-cucumber-reporting -->
+		<dependency>
+		    <groupId>net.masterthought</groupId>
+		    <artifactId>maven-cucumber-reporting</artifactId>
+		    <version>5.8.1</version>
+		</dependency>
+
 
 
   </dependencies>

@@ -1,6 +1,8 @@
 package com.amazon.hooks;
 
+import com.amazon.utils.ExtentTestNGITestListener;
 import com.amazon.utils.TestContext;
+import com.aventstack.extentreports.ExtentTest;
 
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
@@ -18,27 +20,23 @@ public class Hooks {
     @Before
     public void beforeScenario(Scenario scenario) throws InterruptedException {
     	
-    	System.out.println("AT @BeforeScenario method Hooks Class");
-    	
     	testContext.getDriver().get(testContext.getUrl());
-    	
- 	    System.out.println("At @BeforeScenaario url from config file: " + testContext.getUrl());
-   	
+    	String scenarioName = scenario.getName();
+    	ExtentTest test = ExtentTestNGITestListener.getExtentReports().createTest(scenarioName);
+    	ExtentTestNGITestListener.setTest(test);   	
     }
 
     @AfterStep
     public void addScreenshot(Scenario scenario) {
     	
-    	System.out.println("AT @AfterStep method Hooks Class"); 
     	   
     }
 
     @After
     public void afterScenario(Scenario scenario) {
     	
-    	System.out.println("#########################AT @AfterScenario method Hooks Class");
-    	
     	testContext.quitDriver();
+    	testContext.flushReports(); // Finalize the report
     }
 
 }

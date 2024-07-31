@@ -36,17 +36,6 @@ public class ConfigReader {
             ex.printStackTrace();
         }
     }
-
-//    public String getReportConfigPath() {
-//        String reportConfigPath = properties.getProperty("reportConfigPath");
-//        System.out.println("Report Config Path: " + reportConfigPath); // Debug statement
-//        if (reportConfigPath != null) {
-//            return reportConfigPath;
-//        } else {
-//            throw new RuntimeException("Report Config Path not specified in the Configuration.properties file for the Key: reportConfigPath");
-//        }
-//    }
-
     
     // Method to reset the singleton instance
     public static void resetInstance() {

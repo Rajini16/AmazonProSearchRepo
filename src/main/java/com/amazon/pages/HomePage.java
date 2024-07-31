@@ -11,7 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage {
 	private WebDriverWait wait;
-//	private WebDriver driver;
 	
 	@FindBy(id = "twotabsearchtextbox")
 	WebElement productNavSearchBox;

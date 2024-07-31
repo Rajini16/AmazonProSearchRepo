@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="13.129" tests="2" skipped="0" failures="0" errors="0">
-<testcase classname="Amazon Product Search with different options" name="Product search on Amazon home page - #1.2" time="8.575">
+<testsuite name="Cucumber" time="14.448" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="Amazon Product Search with different options" name="Product search on Amazon home page - #1.2" time="14.192">
 <system-out><![CDATA[
 Given I open the Amazon homepage............................................passed
 When I enter laptop in the search box.......................................passed
@@ -8,7 +8,7 @@ And I click on the search button for product laptop.........................pass
 Then I should see search results for product laptop.........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Amazon Product Search with different options" name="Product search on Amazon home page - #1.1" time="12.927">
+<testcase classname="Amazon Product Search with different options" name="Product search on Amazon home page - #1.1" time="14.207">
 <system-out><![CDATA[
 Given I open the Amazon homepage............................................passed
 When I enter pen in the search box..........................................passed

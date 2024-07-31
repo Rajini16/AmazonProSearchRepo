@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <!-- Report theme: standard, dark -->
+        <theme>standard</theme>
+        
+        <!-- Enables timeline; defaults to true -->
+        <enableTimeline>true</enableTimeline>
+
+        <!-- Document encoding; defaults to UTF-8 -->
+        <encoding>UTF-8</encoding>
+        
+        <!-- Protocol for script and stylesheets; defaults to https -->
+        <protocol>https</protocol>
+        
+        <!-- Title of the document -->
+        <documentTitle>Extent_AmazonProSearch</documentTitle>
+        
+        <!-- Report name - displayed at top navigation -->
+        <reportName>Extent REPORT</reportName>
+        
+        <!-- Test view chart location: top, bottom -->
+        <testViewChartLocation>bottom</testViewChartLocation>
+
+        <!-- Log level: info, debug, warn, error, fatal -->
+        <loglevel>info</loglevel> <!-- Set log level for the report -->
+
+        <!-- Enable or disable showing test cases -->
+        <showTestCase>true</showTestCase> <!-- Defaults to false -->
+
+        <!-- Enable or disable showing category charts -->
+        <showCategory>true</showCategory> <!-- Defaults to false -->
+
+        <!-- Enable dashboard view; defaults to true -->
+        <showDashboard>true</showDashboard>
+
+        <!-- Enables screenshot on failure; defaults to true -->
+        <enableScreenshotOnFailure>true</enableScreenshotOnFailure>
+
+        <!-- Custom JavaScript -->
+        <scripts>
+            <![CDATA[
+                $(document).ready(function() {
+                    // Custom JS code here
+                });
+            ]]>
+        </scripts>
+        
+        <!-- Custom styles -->
+        <styles>
+            <![CDATA[
+                /* Custom CSS code here */
+                body {
+                    font-family: Arial, sans-serif;
+                }
+                h1 {
+                    color: #333;
+                }
+            ]]>
+        </styles>
+    </configuration>
+</extentreports>

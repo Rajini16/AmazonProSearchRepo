@@ -4,6 +4,9 @@ import org.openqa.selenium.WebDriver;
 
 import com.amazon.pages.HomePage;
 import com.amazon.pages.SearchResultPage;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class TestContext {
     private WebDriver driver;
@@ -11,14 +14,17 @@ public class TestContext {
     private SearchResultPage searchResultPage;
     private Utility utility;
     public ConfigReader configReader;
+    private ExtentReports extentReports;
 
     // Default constructor
     public TestContext() throws InterruptedException {
         configReader = ConfigReader.getInstance();
         // Set up WebDriver here
         driver = DriverFactory.initDriver(configReader.getBrowser());
-        initializeContext(driver); // Call the parameterized constructor to initialize context
-        System.out.println("%%%%%%%%%%%%%%TestContext Driver Initializing: " + getDriver());
+        initializeContext(driver); // Call the parameterized constructor to initialize context        
+        // Fetch ExtentReports from the listener
+        extentReports = ExtentTestNGITestListener.getExtentReports();   
+
     }
 
     private void initializeContext(WebDriver driver) throws InterruptedException {
@@ -28,6 +34,14 @@ public class TestContext {
         utility = new Utility(driver);
     }
 
+    public ExtentReports getExtentReports() {
+        return extentReports;
+    }
+
+    public void flushReports() {
+        extentReports.flush(); // Call this at the end of your test execution
+    }
+    
     public WebDriver getDriver() {
         return driver;
     }
@@ -50,7 +64,6 @@ public class TestContext {
 
     public void quitDriver() {
         if (driver != null) {
-            System.out.println("%%%%%%%%%%%%%%TestContext Driver closing: " + driver);
             driver.quit();
             driver = null;
         }

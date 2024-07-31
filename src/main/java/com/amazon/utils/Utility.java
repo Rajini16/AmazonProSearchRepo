@@ -84,17 +84,16 @@ public class Utility {
 	}
  
     
-    public void validateUrl() {
-        try {
-            wait.until(ExpectedConditions.titleContains("Amazon"));
-            System.out.println("Title of the web page: " + driver.getTitle());
-//            return;
-        } catch (Exception e) {
-            System.err.println("Failed to load the page. URL might be incorrect.");
-            System.out.println("Title of the web page: " + driver.getTitle());
-            captureScreenshot();
-            throw new RuntimeException("Failed to load the page. URL might be incorrect.");
+    public boolean validateUrl() {
+    	
+    	String currentUrl = driver.getCurrentUrl(); // Actual URL
+        String expectedUrl = ConfigReader.getUrl(); // Expected URL
+        expectedUrl = "https://www.amazon.in/";
+
+        if (!currentUrl.equals(expectedUrl)) {
+            return false; // URL is not valid
         }
+        return true; // URL is valid   
     }
     
 	public void validateProductItems(SearchResultPage searchResultPage) throws InterruptedException {

@@ -6,8 +6,8 @@
       <class name="com.amazon.runners.ProTestNGRunner">
         <methods>
           <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
           <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- com.amazon.runners.ProTestNGRunner -->
     </classes>
