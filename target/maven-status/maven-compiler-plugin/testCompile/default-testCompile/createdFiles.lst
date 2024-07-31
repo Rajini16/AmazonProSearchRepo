@@ -1,2 +1,3 @@
+com\amazon\stepdefinitions\ProSearchSteps.class
 com\amazon\runners\ProTestNGRunner.class
-com\amazon\stepdefinitions\ProSearch.class
+com\amazon\hooks\Hooks.class

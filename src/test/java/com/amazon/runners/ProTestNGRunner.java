@@ -8,6 +8,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		features = "src/test/resources/features",
 		glue = {"com.amazon.stepdefinitions", "com.amazon.hooks"}, 
+//		dryRun= true,
 		monochrome = true, // Display the console output in a readable format
 				publish = true,
 		plugin= {
