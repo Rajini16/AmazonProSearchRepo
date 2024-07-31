@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="18.855" tests="4" skipped="0" failures="0" errors="0">
+<testcase classname="Amazon Product Search with different options" name="Product search on Amazon home page - #1.2" time="18.184">
+<system-out><![CDATA[
+Given I open the Amazon homepage............................................passed
+When I enter laptop in the search box.......................................passed
+And I click on the search button for product laptop.........................passed
+Then I should see search results for product laptop.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Amazon Product Search with different options" name="Product search on Amazon home page - #1.1" time="18.557">
+<system-out><![CDATA[
+Given I open the Amazon homepage............................................passed
+When I enter pen in the search box..........................................passed
+And I click on the search button for product pen............................passed
+Then I should see search results for product pen............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Amazon Product Search with different options" name="Product search on Amazon home page - #1.3" time="14.17">
+<system-out><![CDATA[
+Given I open the Amazon homepage............................................passed
+When I enter school bags for girl kid in the search box.....................passed
+And I click on the search button for product school bags for girl kid.......passed
+Then I should see search results for product school bags for girl kid.......passed
+]]></system-out>
+</testcase>
+<testcase classname="Amazon Product Search with different options" name="Product search on Amazon home page - #1.4" time="16.368">
+<system-out><![CDATA[
+Given I open the Amazon homepage............................................passed
+When I enter Chocolates in the search box...................................passed
+And I click on the search button for product Chocolates.....................passed
+Then I should see search results for product Chocolates.....................passed
+]]></system-out>
+</testcase>
+</testsuite>
